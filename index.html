@@ -4,17 +4,43 @@
         <title>Henry Wilt</title>
         <meta charset="utf-8">
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <H1>Henry Wilt, Software Engineer</H1>
+        <button class="toggle-btn" id="toggleModeBtn">Light Mode</button>
+        <h2>Henry Wilt, Software Engineer</h2>
 
-        <h2>Resume</h2>
-
-        <p><a href="documents/henry-wilt-2026.pdf" download>Download my resume (PDF)</a></p>
-
-        <h2>Teaching</h2>
-
-        <p><a href="/Ursinus-CS474-Spring2026" target="_blank">Spring 2026 Class Page</a></p>
+        <div class="teaching-container">
+            <h3>Teaching</h3>
+            <p><b>2025-2026 Courses Taught:</b></p>
+            <p>Ursinus College <i>Department of Math, Computer Science, and Statistics</i></p>
+            <p><a href="Ursinus-CS474-Spring2026" target="_blank">CS 474</a>: Human Computer Interaction (Spring)</p>
+        </div>
         
+        <div class="resume-container">
+            <h3>Resume</h3>
+            <p>Can be downloaded <a href="documents/henry-wilt-2026.pdf" download>here</a></p>
+        </div>
+        
+        <script>
+            const btn = document.getElementById('toggleModeBtn');
+            const body = document.body;
+
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-mode');
+                btn.textContent = 'Light Mode';
+            }
+
+            btn.addEventListener('click', () => {
+                body.classList.toggle('light-mode');
+                if (body.classList.contains('light-mode')) {
+                    btn.textContent = 'Dark Mode';
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    btn.textContent = 'Light Mode';
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        </script>
     </body>
 </html>

@@ -1,0 +1,52 @@
+:root {
+    --bg-color: #181a1b;
+    --text-color: #e8eaed;
+    --link-color: #8ab4f8;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+    margin-left: 10px;
+}
+
+a {
+    color: var(--link-color);
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5em 1em;
+    background: #333;
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    z-index: 1000;
+}
+
+body.light-mode {
+    --bg-color: #fff;
+    --text-color: #222;
+    --link-color: #1a73e8;
+}
+
+body.light-mode .toggle-btn {
+    background: #eee;
+}
+
+.teaching-container {
+    p {
+        padding-left: 15px;
+    }
+}
+
+.resume-container {
+    p {
+        padding-left: 15px;
+    }
+}
