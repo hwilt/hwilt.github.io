@@ -97,11 +97,18 @@ button:focus-visible {
 
 .contour path {
   fill: none;
+  stroke: var(--green);
   stroke-width: 1.5;
   opacity: 0.55;
 }
 
-.contour path { stroke: var(--green); }
+/* Waypoints on the 404's trail. Filled rather than stroked, and kept clear of
+   the viewBox edges in the markup so they aren't clipped in half. */
+.contour .mark {
+  fill: var(--green);
+  stroke: none;
+  opacity: 0.55;
+}
 
 /* ---------- Accessibility ---------- */
 @media (prefers-reduced-motion: reduce) {
