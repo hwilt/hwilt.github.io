@@ -1,47 +1,113 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Henry Wilt</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <button class="toggle-btn" id="toggleModeBtn">Light Mode</button>
-        <h2>Henry Wilt, Software Engineer</h2>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Henry Wilt — Software Engineer</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <div class="teaching-container">
-            <h3>Teaching</h3>
-            <p><b>2025-2026 Courses Taught:</b></p>
-            <p>Ursinus College <i>Department of Math, Computer Science, and Statistics</i></p>
-            <p><a href="Ursinus-CS474-Spring2026" target="_blank">CS 474</a>: Human Computer Interaction (Spring)</p>
-        </div>
-        
-        <div class="resume-container">
-            <h3>Resume</h3>
-            <p>Can be downloaded <a href="documents/henry-wilt-2026.pdf" download>here</a></p>
-        </div>
-        
-        <script>
-            const btn = document.getElementById('toggleModeBtn');
-            const body = document.body;
+<nav>
+  <a class="name" href="#top">henry wilt</a>
+  <ul>
+    <li><a href="#about">about</a></li>
+    <li><a href="#skills">skills</a></li>
+    <li><a href="#doing">now</a></li>
+    <li><a href="#resume">resume</a></li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+</nav>
 
-            if (localStorage.getItem('theme') === 'dark') {
-                body.classList.add('dark-mode');
-                btn.textContent = 'Light Mode';
-            }
+<div class="wrap">
 
-            btn.addEventListener('click', () => {
-                body.classList.toggle('light-mode');
-                if (body.classList.contains('light-mode')) {
-                    btn.textContent = 'Dark Mode';
-                    localStorage.setItem('theme', 'light');
-                } else {
-                    btn.textContent = 'Light Mode';
-                    localStorage.setItem('theme', 'dark');
-                }
-            });
-        </script>
-    </body>
+  <header class="hero" id="top">
+    <h1>Henry Wilt</h1>
+    <div class="role">Software Engineer</div>
+    <p class="tagline">Building healthcare software by day, chasing a sub-1:25 half marathon on the weekends.</p>
+  </header>
+
+  <svg class="contour" viewBox="0 0 880 28" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,14 C60,2 120,26 180,14 C240,2 300,26 360,14 C420,2 480,26 540,14 C600,2 660,26 720,14 C780,2 840,26 880,14" />
+  </svg>
+
+  <section class="about" id="about">
+    <h2>About</h2>
+    <p>I'm a software engineer at CSS, working remotely from the Philadelphia area with a background in healthcare engineering. I like building things people actually use — right now that's a running coaching app, which doubles as my excuse to keep learning outside of work.</p>
+    <p>Before this, I spent a semester teaching Human-Computer Interaction at Ursinus College, which was a good reminder that good UX is hard to teach and even harder to get right.</p>
+    <p>Outside of code, I run — half marathons mostly, currently chasing a sub-1:25.</p>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <ul class="tags">
+          <li>C#</li><li>TypeScript</li><li>SQL</li><li>HTML/CSS</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Frameworks &amp; Libraries</h3>
+        <ul class="tags">
+          <li>.NET</li><li>Angular</li><li>Entity Framework</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Data &amp; Cloud</h3>
+        <ul class="tags">
+          <li>Azure</li><li>MongoDB</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Tools &amp; Practices</h3>
+        <ul class="tags">
+          <li>Git</li><li>RESTful APIs</li><li>Scrum/Agile</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="doing" id="doing">
+    <h2>What I've been doing</h2>
+    <div class="doing-list">
+      <div class="doing-item">
+        <span class="label">Currently</span>
+        <p>Software Engineer at CSS — healthcare engineering, fully remote.</p>
+      </div>
+      <div class="doing-item">
+        <span class="label">Teaching</span>
+        <p>Taught CS474: Human-Computer Interaction at Ursinus College, Spring 2026.</p>
+      </div>
+      <div class="doing-item">
+        <span class="label">Side project</span>
+        <p>Building a running tracking and coaching app — my first real personal project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="resume" id="resume">
+    <h2>Resume</h2>
+    <a class="resume-btn" href="/documents/HenryWiltResume.pdf" target="_blank" rel="noopener">View resume (PDF) →</a>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p><a href="mailto:henry@hwilt.com">henry@hwilt.com</a></p>
+    <ul class="contact-links">
+      <li><a href="https://www.linkedin.com/in/henrywilt" target="_blank" rel="noopener">linkedin →</a></li>
+      <li><a href="https://github.com/hwilt" target="_blank" rel="noopener">github →</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2026 Henry Wilt
+  </footer>
+
+</div>
+
+</body>
 </html>
