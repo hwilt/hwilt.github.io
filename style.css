@@ -126,7 +126,7 @@
   }
   .contour path {
     fill: none;
-    stroke: var(--green);
+    stroke: var(--ink);
     stroke-width: 1.5;
     opacity: 0.55;
   }
@@ -166,7 +166,7 @@
     margin-bottom: 20px;
   }
 
-  .about p { max-width: 640px; margin: 0 0 16px; }
+  .about p { width: 100%; margin: 0 0 16px; }
 
   /* ---------- Skills ---------- */
   .skills-grid {
@@ -221,7 +221,7 @@
   .doing-item {
     padding: 18px 20px;
     background: var(--cream-deep);
-    border-left: 3px solid var(--clay);
+    border-left: 5px solid var(--clay);
     border-radius: 2px;
   }
 
