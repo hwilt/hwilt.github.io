@@ -7,5 +7,12 @@
   "livePreview.serverRoot": "public",
 
   // ritwickdey.liveserver ("Live Server") — leading slash, relative to workspace.
-  "liveServer.settings.root": "/public"
+  "liveServer.settings.root": "/public",
+
+  // wrangler.jsonc points $schema at unpkg, which VS Code does not trust out of
+  // the box. The schema is only published there — SchemaStore's wrangler entry
+  // just redirects to the same host — so allow it rather than drop validation.
+  "json.schemaDownload.trustedDomains": {
+    "https://unpkg.com/": true
+  }
 }
