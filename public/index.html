@@ -24,7 +24,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/home.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -109,7 +110,7 @@
 
   <section class="resume" id="resume">
     <h2>Resume</h2>
-    <a class="resume-btn" href="/documents/HenryWiltResume.pdf" target="_blank" rel="noopener">View resume (PDF) →</a>
+    <a class="btn" href="/documents/HenryWiltResume.pdf" target="_blank" rel="noopener">View resume (PDF) →</a>
   </section>
 
   <section class="skills" id="skills">
@@ -157,16 +158,7 @@
 
 </div>
 
-<script>
-  (function () {
-    var nav = document.querySelector('nav');
-    var sentinel = document.getElementById('nav-sentinel');
-    if (!nav || !sentinel || !('IntersectionObserver' in window)) return;
-    new IntersectionObserver(function (entries) {
-      nav.classList.toggle('is-stuck', !entries[0].isIntersecting);
-    }).observe(sentinel);
-  })();
-</script>
+<script src="/js/nav.js" defer></script>
 
 </body>
 </html>
