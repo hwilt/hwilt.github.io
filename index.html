@@ -56,15 +56,19 @@
 </head>
 <body>
 
+<div id="nav-sentinel" aria-hidden="true"></div>
+
 <nav>
-  <a class="name" href="#top">henry wilt</a>
-  <ul>
-    <li><a href="#about">about</a></li>
-    <li><a href="#doing">now</a></li>
-    <li><a href="#resume">resume</a></li>
-    <li><a href="#skills">skills</a></li>
-    <li><a href="#contact">contact</a></li>
-  </ul>
+  <div class="nav-inner">
+    <a class="name" href="#top">henry wilt</a>
+    <ul>
+      <li><a href="#about">about</a></li>
+      <li><a href="#doing">now</a></li>
+      <li><a href="#resume">resume</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </div>
 </nav>
 
 <div class="wrap">
@@ -152,6 +156,17 @@
   </footer>
 
 </div>
+
+<script>
+  (function () {
+    var nav = document.querySelector('nav');
+    var sentinel = document.getElementById('nav-sentinel');
+    if (!nav || !sentinel || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (entries) {
+      nav.classList.toggle('is-stuck', !entries[0].isIntersecting);
+    }).observe(sentinel);
+  })();
+</script>
 
 </body>
 </html>
