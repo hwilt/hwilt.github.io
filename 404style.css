@@ -15,14 +15,42 @@
     color: var(--ink);
     font-family: 'Public Sans', sans-serif;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
   }
 
   .wrap {
     max-width: 520px;
     padding: 24px;
     text-align: center;
+    /* Centers in the space left over below the nav, on both axes */
+    margin: auto;
+  }
+
+  /* ---------- Nav (name only, not sticky) ---------- */
+  nav {
+    flex-shrink: 0;
+  }
+
+  .nav-inner {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 20px 24px;
+  }
+
+  .name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .name:hover { color: var(--clay); }
+
+  .name:focus-visible {
+    outline: 2px solid var(--clay);
+    outline-offset: 3px;
   }
 
   .code {
