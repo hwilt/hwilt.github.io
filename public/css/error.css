@@ -49,5 +49,3 @@ nav { flex-shrink: 0; }
   height: 24px;
   margin: 24px auto;
 }
-
-.contour path { stroke: var(--green); }

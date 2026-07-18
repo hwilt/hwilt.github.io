@@ -101,6 +101,8 @@ button:focus-visible {
   opacity: 0.55;
 }
 
+.contour path { stroke: var(--green); }
+
 /* ---------- Accessibility ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
